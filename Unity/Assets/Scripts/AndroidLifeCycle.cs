@@ -29,5 +29,16 @@ namespace cn.jonny.android.plugin
                     break;
             }
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                if (Application.platform == RuntimePlatform.Android)
+                {
+                    ChangeLifeCycleState("onBackPressed");
+                }
+            }
+        }
     }
 }

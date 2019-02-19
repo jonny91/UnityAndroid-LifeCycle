@@ -26,13 +26,6 @@ public class MainActivity extends UnityPlayerActivity {
     }
 
     @Override
-    public void onBackPressed() {
-
-        UnityPlayer.UnitySendMessage("AndroidLifeCycle", "ChangeLifeCycleState", "onBackPressed");
-        super.onBackPressed();
-    }
-
-    @Override
     protected void onDestroy() {
         UnityPlayer.UnitySendMessage("AndroidLifeCycle", "ChangeLifeCycleState", "onDestroy");
         super.onDestroy();
